@@ -1,0 +1,2 @@
+
+9aa912c66cea594841aec4de499e53b1a3fd3602	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@parcel%2fwatcher-win32-ia32","integrity":null,"time":1756095831661,"size":"262","metadata":{"time":1756095831661,"url":"http://registry.npm.taobao.org/@parcel%2fwatcher-win32-ia32","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:53 GMT","location":"https://registry.npmmirror.com/@parcel%2fwatcher-win32-ia32"},"options":{"compress":true},"status":301}}

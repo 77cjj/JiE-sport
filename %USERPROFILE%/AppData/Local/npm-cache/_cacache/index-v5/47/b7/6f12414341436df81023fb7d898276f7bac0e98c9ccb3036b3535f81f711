@@ -1,0 +1,2 @@
+
+9e835d30954441d3654922cdcaf8dcb166e9d64c	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/rfdc","integrity":null,"time":1756095652954,"size":"262","metadata":{"time":1756095652954,"url":"http://registry.npm.taobao.org/rfdc","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:54 GMT","location":"https://registry.npmmirror.com/rfdc"},"options":{"compress":true},"status":301}}

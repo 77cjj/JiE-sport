@@ -1,0 +1,2 @@
+
+355bfd4b4f8f02693af19e43197973d830cc1a2d	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/esrecurse","integrity":null,"time":1756618386784,"size":"262","metadata":{"time":1756618386784,"url":"http://registry.npm.taobao.org/esrecurse","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:07 GMT","location":"https://registry.npmmirror.com/esrecurse"},"options":{"compress":true},"status":301}}

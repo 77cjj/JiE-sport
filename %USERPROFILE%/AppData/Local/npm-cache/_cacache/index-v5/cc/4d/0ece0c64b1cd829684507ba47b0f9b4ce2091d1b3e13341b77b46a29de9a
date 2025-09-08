@@ -1,0 +1,2 @@
+
+3ae32b5c2735cd9abcf3962a25f330ce5c6eb652	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/electron-to-chromium","integrity":null,"time":1756095662343,"size":"262","metadata":{"time":1756095662343,"url":"http://registry.npm.taobao.org/electron-to-chromium","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:21:04 GMT","location":"https://registry.npmmirror.com/electron-to-chromium"},"options":{"compress":true},"status":301}}

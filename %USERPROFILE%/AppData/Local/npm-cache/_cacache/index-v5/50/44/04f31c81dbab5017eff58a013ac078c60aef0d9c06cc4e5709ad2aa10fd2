@@ -1,0 +1,2 @@
+
+95873d06e2cb0f0e8caee7b8818897a020b820a1	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/has-flag","integrity":null,"time":1756618388365,"size":"262","metadata":{"time":1756618388365,"url":"http://registry.npm.taobao.org/has-flag","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/has-flag"},"options":{"compress":true},"status":301}}

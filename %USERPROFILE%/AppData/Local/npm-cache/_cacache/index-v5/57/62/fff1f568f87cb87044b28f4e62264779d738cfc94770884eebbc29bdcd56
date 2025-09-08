@@ -1,0 +1,2 @@
+
+69623cf585b05969da811f5c5d536ed100e8c963	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/wildcard","integrity":null,"time":1756618388631,"size":"262","metadata":{"time":1756618388631,"url":"http://registry.npm.taobao.org/wildcard","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/wildcard"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+73659e36d5400ac10d47b650455bb9afac46f3c1	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@xtuc%2flong","integrity":null,"time":1756618387272,"size":"262","metadata":{"time":1756618387272,"url":"http://registry.npm.taobao.org/@xtuc%2flong","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:07 GMT","location":"https://registry.npmmirror.com/@xtuc%2flong"},"options":{"compress":true},"status":301}}

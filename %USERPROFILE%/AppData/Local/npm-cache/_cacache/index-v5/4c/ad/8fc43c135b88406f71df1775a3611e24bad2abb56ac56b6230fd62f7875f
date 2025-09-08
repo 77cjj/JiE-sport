@@ -1,0 +1,2 @@
+
+0f2c19fe3e5d6c341ad2984d1b5378fd9771d32f	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/hookable","integrity":null,"time":1756095653013,"size":"262","metadata":{"time":1756095653013,"url":"http://registry.npm.taobao.org/hookable","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:54 GMT","location":"https://registry.npmmirror.com/hookable"},"options":{"compress":true},"status":301}}

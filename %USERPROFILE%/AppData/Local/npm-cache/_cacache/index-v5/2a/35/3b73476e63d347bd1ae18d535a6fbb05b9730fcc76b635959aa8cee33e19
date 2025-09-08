@@ -1,0 +1,2 @@
+
+111c5543ddf3b69915e92816b451188774f7631f	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@floating-ui%2futils","integrity":null,"time":1756095792142,"size":"262","metadata":{"time":1756095792142,"url":"http://registry.npm.taobao.org/@floating-ui%2futils","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:14 GMT","location":"https://registry.npmmirror.com/@floating-ui%2futils"},"options":{"compress":true},"status":301}}

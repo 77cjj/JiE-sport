@@ -1,0 +1,2 @@
+
+6fcb66bd846ce71f66045898e8e106e85227aa96	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/birpc","integrity":null,"time":1756095653009,"size":"262","metadata":{"time":1756095653009,"url":"http://registry.npm.taobao.org/birpc","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:54 GMT","location":"https://registry.npmmirror.com/birpc"},"options":{"compress":true},"status":301}}

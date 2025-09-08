@@ -1,0 +1,2 @@
+
+88dd3559e828f9232de1b0305155dcc4f3c048a0	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/tinyglobby","integrity":null,"time":1756095642990,"size":"262","metadata":{"time":1756095642990,"url":"http://registry.npm.taobao.org/tinyglobby","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:44 GMT","location":"https://registry.npmmirror.com/tinyglobby"},"options":{"compress":true},"status":301}}

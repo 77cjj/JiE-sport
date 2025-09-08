@@ -1,0 +1,2 @@
+
+fd1eb9415650bbd930716314fe7c2058ab7055f5	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/async-validator","integrity":null,"time":1756095791218,"size":"262","metadata":{"time":1756095791218,"url":"http://registry.npm.taobao.org/async-validator","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:13 GMT","location":"https://registry.npmmirror.com/async-validator"},"options":{"compress":true},"status":301}}

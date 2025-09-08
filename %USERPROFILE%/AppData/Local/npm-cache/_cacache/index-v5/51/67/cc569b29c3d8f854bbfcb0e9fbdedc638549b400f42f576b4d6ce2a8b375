@@ -1,0 +1,2 @@
+
+bd819d0c8f2c36e638fe4dd47d48242cc774d93e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/buffer-from","integrity":null,"time":1756618388500,"size":"262","metadata":{"time":1756618388500,"url":"http://registry.npm.taobao.org/buffer-from","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/buffer-from"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+55c12f51d1ff28e9712a1820f05f8f323ebe1a2e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/error-stack-parser-es","integrity":null,"time":1756095653656,"size":"262","metadata":{"time":1756095653656,"url":"http://registry.npm.taobao.org/error-stack-parser-es","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:55 GMT","location":"https://registry.npmmirror.com/error-stack-parser-es"},"options":{"compress":true},"status":301}}

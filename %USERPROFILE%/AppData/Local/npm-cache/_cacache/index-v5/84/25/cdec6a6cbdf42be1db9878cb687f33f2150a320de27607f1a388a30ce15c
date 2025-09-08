@@ -1,0 +1,2 @@
+
+cdb53f50d9246bb2f452c3ab4ee93cb7e0b4caed	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@rolldown%2fpluginutils","integrity":null,"time":1756095642796,"size":"262","metadata":{"time":1756095642796,"url":"http://registry.npm.taobao.org/@rolldown%2fpluginutils","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:44 GMT","location":"https://registry.npmmirror.com/@rolldown%2fpluginutils"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+ceb0c55c99faf64a995135a16105aaaa90533aab	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/fdir","integrity":null,"time":1756095643049,"size":"262","metadata":{"time":1756095643049,"url":"http://registry.npm.taobao.org/fdir","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:44 GMT","location":"https://registry.npmmirror.com/fdir"},"options":{"compress":true},"status":301}}

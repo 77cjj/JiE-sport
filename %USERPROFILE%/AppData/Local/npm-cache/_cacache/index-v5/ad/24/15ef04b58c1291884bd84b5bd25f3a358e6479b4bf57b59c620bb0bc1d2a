@@ -1,0 +1,2 @@
+
+b4b2baa7947fef8138fc2b6dadfb1ac99f764755	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/webpack-cli","integrity":null,"time":1756618385219,"size":"262","metadata":{"time":1756618385219,"url":"http://registry.npm.taobao.org/webpack-cli","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:05 GMT","location":"https://registry.npmmirror.com/webpack-cli"},"options":{"compress":true},"status":301}}

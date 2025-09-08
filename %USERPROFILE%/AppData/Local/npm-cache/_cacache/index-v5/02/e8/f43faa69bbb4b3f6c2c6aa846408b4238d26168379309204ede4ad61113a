@@ -1,0 +1,2 @@
+
+d33329fe09ce763131214723da10fe6363275e17	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/mdurl","integrity":null,"time":1756609953566,"size":"262","metadata":{"time":1756609953566,"url":"http://registry.npm.taobao.org/mdurl","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 03:12:34 GMT","location":"https://registry.npmmirror.com/mdurl"},"options":{"compress":true},"status":301}}

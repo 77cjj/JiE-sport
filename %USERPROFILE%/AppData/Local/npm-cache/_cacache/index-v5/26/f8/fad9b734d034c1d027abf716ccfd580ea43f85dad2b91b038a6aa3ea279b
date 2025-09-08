@@ -1,0 +1,2 @@
+
+b136d97077444621b85be31d162df8f8b175102e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/yoctocolors","integrity":null,"time":1756095653606,"size":"262","metadata":{"time":1756095653606,"url":"http://registry.npm.taobao.org/yoctocolors","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:55 GMT","location":"https://registry.npmmirror.com/yoctocolors"},"options":{"compress":true},"status":301}}

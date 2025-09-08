@@ -1,0 +1,2 @@
+
+ab950f6f185198bb5eb637d229e2f9eb37c7ec0e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/linkify-it","integrity":null,"time":1756609953565,"size":"262","metadata":{"time":1756609953565,"url":"http://registry.npm.taobao.org/linkify-it","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 03:12:34 GMT","location":"https://registry.npmmirror.com/linkify-it"},"options":{"compress":true},"status":301}}

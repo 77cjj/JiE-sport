@@ -1,0 +1,2 @@
+
+03b94928f530a8175a1b5c1ef24e178d80908cde	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@polka%2furl","integrity":null,"time":1756095653652,"size":"262","metadata":{"time":1756095653652,"url":"http://registry.npm.taobao.org/@polka%2furl","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:55 GMT","location":"https://registry.npmmirror.com/@polka%2furl"},"options":{"compress":true},"status":301}}

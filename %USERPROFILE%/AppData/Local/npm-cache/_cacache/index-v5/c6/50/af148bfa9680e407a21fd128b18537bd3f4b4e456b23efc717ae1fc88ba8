@@ -1,0 +1,2 @@
+
+b0f938e81062077074168b570e5c6328125ace33	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/events","integrity":null,"time":1756618385423,"size":"262","metadata":{"time":1756618385423,"url":"http://registry.npm.taobao.org/events","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:06 GMT","location":"https://registry.npmmirror.com/events"},"options":{"compress":true},"status":301}}

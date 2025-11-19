@@ -15,4 +15,16 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    hmr: true,
+    open: true,
+    watch: {
+      usePolling: true
+    },
+    fs: {
+      strict: false
+    },
+    // 关键修复点
+    historyApiFallback: true
+  }
 })

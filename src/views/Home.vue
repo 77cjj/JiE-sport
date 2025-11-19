@@ -26,7 +26,7 @@
               <el-button
                 type="primary"
                 link
-                @click="$router.push(`/events/${event.id}`)"
+                @click="showEventDetail(event)"
               >
                 查看详情
               </el-button>
@@ -35,57 +35,238 @@
         </div>
       </div>
     </div>
+
+    <!-- 活动详情弹窗 -->
+    <el-dialog
+      v-model="dialogVisible"
+      :title="selectedEvent?.title"
+      width="600px"
+      :before-close="handleClose"
+      class="event-dialog"
+      align-center
+    >
+      <div v-if="selectedEvent" class="event-detail">
+        <!-- 活动封面 -->
+        <div class="detail-cover">
+          <img :src="selectedEvent.cover" alt="活动封面" />
+        </div>
+        
+        <!-- 活动信息 -->
+        <div class="detail-info">
+          <div class="info-item">
+            <el-icon><Calendar /></el-icon>
+            <span>{{ selectedEvent.date }}</span>
+          </div>
+          <div class="info-item">
+            <el-icon><Location /></el-icon>
+            <span>{{ selectedEvent.location }}</span>
+          </div>
+          <div class="info-item">
+            <el-icon><User /></el-icon>
+            <span>{{ selectedEvent.participants }}</span>
+          </div>
+        </div>
+
+        <!-- 活动描述 -->
+        <div class="detail-description">
+          <h4>活动简介</h4>
+          <p>{{ selectedEvent.description }}</p>
+        </div>
+
+        <!-- 活动亮点 -->
+        <div class="detail-highlights">
+          <h4>活动亮点</h4>
+          <ul>
+            <li v-for="(highlight, index) in selectedEvent.highlights" :key="index">
+              {{ highlight }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="detail-actions">
+          <el-button 
+            type="primary" 
+            size="large" 
+            @click="goToRegistration"
+            :icon="Edit"
+          >
+            立即报名
+          </el-button>
+          <el-button 
+            size="large" 
+            @click="handleClose"
+          >
+            稍后再看
+          </el-button>
+        </div>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
+import { useRouter } from "vue-router";
+import { Calendar, Location, User, Edit } from '@element-plus/icons-vue';
 
+const router = useRouter();
+
+// 弹窗控制
+const dialogVisible = ref(false);
+const selectedEvent = ref(null);
+
+// 活动数据（包含完整信息）
 const hotEvents = ref([
   {
     id: 1,
     title: "春季篮球赛",
     desc: "报名截止时间：3月20日",
     cover: "../public/images/1.jpg",
+    date: "2025年3月25日 - 4月10日",
+    location: "校体育馆篮球场",
+    participants: "5人制，限额16支队伍",
+    description: "春季篮球赛是学校最具影响力的体育赛事之一，旨在增强学生体质，培养团队精神，丰富校园文化生活。比赛采用淘汰赛制，为期两周。",
+    highlights: [
+      "🏆 冠军队伍可获得奖金及荣誉证书",
+      "🎖️ 表现优异者有机会入选校队",
+      "📸 全程专业摄影记录精彩瞬间",
+      "🎁 所有参赛队员均可获得纪念品"
+    ]
   },
   {
     id: 2,
     title: "校园马拉松",
     desc: "报名截止时间：4月5日",
     cover: "../public/images/1.jpg",
+    date: "2025年4月10日 上午8:00",
+    location: "校园环形跑道（全程5公里）",
+    participants: "个人赛，不限人数",
+    description: "校园马拉松是一项全校性的长跑活动，鼓励全体师生参与，提倡健康生活方式，挑战自我极限。赛道环绕校园最美风景线。",
+    highlights: [
+      "🏃 完赛者均可获得完赛奖牌",
+      "⏱️ 前10名选手获得特别奖励",
+      "💧 全程补给站提供能量补给",
+      "🎵 赛道沿途设置音乐加油站"
+    ]
   },
   {
     id: 3,
     title: "足球友谊赛",
     desc: "报名截止时间：4月15日",
     cover: "../public/images/1.jpg",
+    date: "2025年4月20日 - 4月30日",
+    location: "校足球场",
+    participants: "11人制，限额12支队伍",
+    description: "足球友谊赛是促进各学院交流的重要平台，以友谊第一、比赛第二为宗旨，在绿茵场上挥洒青春汗水，展现团队协作精神。",
+    highlights: [
+      "⚽ 提供专业裁判和比赛用球",
+      "🥇 设置最佳射手、最佳守门员等单项奖",
+      "🎪 决赛现场设置观众互动环节",
+      "📺 比赛全程线上直播"
+    ]
   },
   {
     id: 4,
     title: "足球小院赛",
     desc: "报名截止时间：5月15日",
     cover: "../public/images/1.jpg",
+    date: "2025年5月20日 - 6月5日",
+    location: "各学院足球场",
+    participants: "5人制，各学院内部选拔",
+    description: "足球小院赛是专为大一新生设计的院内足球赛事，旨在帮助新生快速融入校园生活，发现和培养足球人才，为校队选拔储备力量。",
+    highlights: [
+      "🌟 大一新生专属赛事",
+      "🎓 表现优异者可代表学院参加大院赛",
+      "🏅 获得人文分及综合分奖励",
+      "👥 认识更多志同道合的球友"
+    ]
   },
   {
     id: 5,
     title: "羽毛球赛",
     desc: "即将开始",
     cover: "../public/images/1.jpg",
+    date: "2025年5月10日 - 5月25日",
+    location: "校体育馆羽毛球场",
+    participants: "单打/双打，不限人数",
+    description: "羽毛球赛是一项深受师生喜爱的体育赛事，比赛分为男单、女单、男双、女双、混双五个项目，满足不同水平选手的参赛需求。",
+    highlights: [
+      "🏸 提供专业羽毛球及场地",
+      "🎯 按水平分组，确保比赛公平性",
+      "🏆 各项目前三名颁发奖杯及奖品",
+      "🎬 精彩对决视频剪辑分享"
+    ]
   },
   {
     id: 6,
     title: "乒乓球赛",
     desc: "火热报名中",
     cover: "../public/images/1.jpg",
+    date: "2025年6月1日 - 6月15日",
+    location: "校乒乓球馆",
+    participants: "单打/双打，不限人数",
+    description: "乒乓球赛是国球项目的校园盛会，比赛采用国际标准规则，为乒乓球爱好者提供切磋技艺、交流经验的平台。",
+    highlights: [
+      "🏓 专业裁判执法，规范比赛流程",
+      "🎖️ 设置新人组和公开组两个级别",
+      "🎁 所有参赛者获得纪念T恤",
+      "📊 赛后数据统计及技术分析"
+    ]
   },
-  { id: 7, title: "排球赛", desc: "敬请期待", cover: "../public/images/1.jpg" },
+  { 
+    id: 7, 
+    title: "排球赛", 
+    desc: "敬请期待", 
+    cover: "../public/images/1.jpg",
+    date: "2025年9月15日 - 9月30日",
+    location: "校排球场",
+    participants: "6人制，限额10支队伍",
+    description: "排球赛是展现团队配合和战术素养的集体项目，比赛氛围热烈，观赏性强，是校园体育文化的重要组成部分。",
+    highlights: [
+      "🏐 提供专业排球及护具",
+      "👨‍🏫 赛前提供技术培训",
+      "🎊 冠军队伍获得团队建设基金",
+      "📷 团队写真拍摄"
+    ]
+  },
   {
     id: 8,
     title: "棋类联赛",
     desc: "周末开赛",
     cover: "../public/images/1.jpg",
+    date: "每周末 14:00-17:00",
+    location: "学生活动中心棋艺室",
+    participants: "个人赛，不限人数",
+    description: "棋类联赛包含中国象棋、国际象棋、围棋三个项目，是智力运动爱好者的竞技舞台，通过对弈促进思维能力和心理素质的提升。",
+    highlights: [
+      "♟️ 三个项目独立计分排名",
+      "🧠 定期邀请棋艺大师指导",
+      "📚 提供棋谱分析和复盘讲解",
+      "🎓 优秀选手推荐参加省级比赛"
+    ]
   },
 ]);
+
+// 显示活动详情
+const showEventDetail = (event) => {
+  selectedEvent.value = event;
+  dialogVisible.value = true;
+};
+
+// 关闭弹窗
+const handleClose = () => {
+  dialogVisible.value = false;
+  setTimeout(() => {
+    selectedEvent.value = null;
+  }, 300);
+};
+
+// 跳转到报名页
+const goToRegistration = () => {
+  handleClose();
+  router.push('/registration');
+};
 
 // 丝滑惯性横向滚动
 const eventsScroller = ref(null);
@@ -120,12 +301,10 @@ const onWheelWithMomentum = (e) => {
 
 onMounted(() => {
   if (eventsScroller.value) targetLeft = eventsScroller.value.scrollLeft;
-  play();
 });
 
 onBeforeUnmount(() => {
   if (animationFrameId) cancelAnimationFrame(animationFrameId);
-  pause();
 });
 </script>
 
@@ -221,6 +400,169 @@ onBeforeUnmount(() => {
   margin-bottom: 12px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+/* ==================== 活动详情弹窗样式 ==================== */
+.event-detail {
+  padding: 10px 0;
+}
+
+.detail-cover {
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.detail-cover:hover img {
+  transform: scale(1.05);
+}
+
+.detail-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+  border-radius: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #606266;
+  font-size: 14px;
+}
+
+.info-item .el-icon {
+  font-size: 18px;
+  color: #409eff;
+}
+
+.detail-description,
+.detail-highlights {
+  margin-bottom: 24px;
+}
+
+.detail-description h4,
+.detail-highlights h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #303133;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 4px solid #409eff;
+}
+
+.detail-description p {
+  line-height: 1.8;
+  color: #606266;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.detail-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-highlights li {
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #606266;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.detail-highlights li:hover {
+  background: #ecf5ff;
+  border-left-color: #409eff;
+  transform: translateX(5px);
+}
+
+.detail-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e4e7ed;
+}
+
+.detail-actions .el-button {
+  flex: 1;
+}
+
+/* 弹窗动画增强 */
+:deep(.el-dialog) {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+:deep(.el-dialog__header) {
+  background: linear-gradient(135deg, #409eff, #66b1ff);
+  color: white;
+  padding: 20px 24px;
+  margin: 0;
+}
+
+:deep(.el-dialog__title) {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+:deep(.el-dialog__headerbtn .el-dialog__close) {
+  color: white;
+  font-size: 20px;
+}
+
+:deep(.el-dialog__headerbtn:hover .el-dialog__close) {
+  color: #f0f0f0;
+}
+
+:deep(.el-dialog__body) {
+  padding: 24px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  :deep(.el-dialog) {
+    width: 90% !important;
+    margin: 20px auto;
+  }
+
+  .detail-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .detail-cover {
+    height: 200px;
+  }
+
+  .detail-actions {
+    flex-direction: column;
+  }
+
+  .detail-actions .el-button {
+    width: 100%;
+  }
 }
 </style>
 

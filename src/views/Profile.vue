@@ -50,6 +50,7 @@
           <el-badge 
             :value="eventsStore.upcomingEvents.length" 
             :max="99" 
+            :hidden="eventsStore.upcomingEvents.length === 0"
             class="badge"
           />
         </div>
@@ -88,6 +89,7 @@
           <el-badge 
             :value="eventsStore.completedEvents.length" 
             :max="99" 
+            :hidden="eventsStore.completedEvents.length === 0"
             class="badge"
           />
         </div>
@@ -123,6 +125,7 @@
           <el-badge 
             :value="eventsStore.unreadNotificationsCount" 
             :max="99" 
+            :hidden="eventsStore.unreadNotificationsCount === 0"
             class="badge"
           >
             <el-button 

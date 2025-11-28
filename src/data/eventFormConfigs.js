@@ -7,6 +7,12 @@ const eventFormConfigs = {
   sportsMeeting: {
     title: "运动会选拔报名",
     notice: defaultNotice,
+    meta: {
+      id: "sportsMeeting-2025",
+      title: "运动会选拔报名",
+      date: "2025-10-25",
+      location: "校田径场",
+    },
     eventGroups: [
       { label: "短跑", options: ["100米", "200米", "400米"] },
       { label: "中长跑", options: ["800米", "1500米", "3000米"] },
@@ -17,6 +23,12 @@ const eventFormConfigs = {
     title: "篮球联赛报名",
     notice:
       "1. 每支球队至少 8 人；2. 同一选手不可同时报名男子 5v5 与女子 5v5；3. 技巧挑战赛、三分赛可额外报名。",
+    meta: {
+      id: "basketballLeague-2025",
+      title: "篮球联赛",
+      date: "2025-11-02",
+      location: "校体育馆主场",
+    },
     eventGroups: [
       { label: "团队项目", options: ["男子 5v5", "女子 5v5", "混合 3v3"] },
       { label: "技能赛", options: ["三分大赛", "技巧挑战赛", "扣篮大赛"] },
@@ -26,6 +38,12 @@ const eventFormConfigs = {
     title: "羽毛球公开赛报名",
     notice:
       "1. 单打、双打最多各报 2 项；2. 双打需在备注里写明搭档姓名；3. 比赛当天需提前 30 分钟检录。",
+    meta: {
+      id: "badmintonOpen-2025",
+      title: "羽毛球公开赛",
+      date: "2025-11-12",
+      location: "体育馆羽毛球场",
+    },
     eventGroups: [
       { label: "单打项目", options: ["男子单打", "女子单打"] },
       {
@@ -38,6 +56,12 @@ const eventFormConfigs = {
     title: "游泳邀请赛报名",
     notice:
       "1. 单人最多 3 个泳姿项目；2. 接力项目由体育部统一编队；3. 需自备泳帽、泳镜。",
+    meta: {
+      id: "swimmingInvite-2025",
+      title: "游泳邀请赛",
+      date: "2025-11-20",
+      location: "校游泳馆",
+    },
     eventGroups: [
       {
         label: "泳姿项目",
@@ -59,6 +83,12 @@ const eventFormConfigs = {
     title: "田径公开赛报名",
     notice:
       "1. 个人最多报 2 个田赛 + 2 个径赛；2. 若报名接力请在备注写明队友；3. 需穿着钉鞋或专业运动鞋。",
+    meta: {
+      id: "trackOpen-2025",
+      title: "田径公开赛",
+      date: "2025-12-02",
+      location: "田径场",
+    },
     eventGroups: [
       { label: "短跑", options: ["100米", "200米", "400米"] },
       { label: "中长跑", options: ["800米", "1500米", "3000米"] },

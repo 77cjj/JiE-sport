@@ -34,6 +34,15 @@
 
 <script setup>
 import { reactive, ref } from "vue";
+import { useRouter } from "vue-router";
+import { ElMessage } from "element-plus";
+import { useUserStore } from "@/stores/userStore";
+
+const ALLOWED_EMAIL = "sport@campus.com";
+const ALLOWED_PASSWORD = "123456";
+
+const router = useRouter();
+const userStore = useUserStore();
 
 const formRef = ref();
 const form = reactive({
@@ -50,13 +59,28 @@ const rules = {
 };
 
 const submitForm = () => {
-  formRef.value.validate((valid) => {
-    if (valid) {
-      console.log("登录成功", form);
-      // 这里可以调用后端 API 验证账号密码
-    } else {
-      console.log("表单验证失败");
+  formRef.value.validate(async (valid) => {
+    if (!valid) {
+      ElMessage.error("表单验证失败");
+      return;
     }
+
+    const matched =
+      form.email === ALLOWED_EMAIL && form.password === ALLOWED_PASSWORD;
+
+    if (!matched) {
+      ElMessage.error("账号或密码错误");
+      return;
+    }
+
+    const res = await userStore.login({ username: "赛事管理员" });
+    if (!res?.success) {
+      ElMessage.error(res?.message || "登录失败，请稍后再试");
+      return;
+    }
+
+    ElMessage.success("登录成功");
+    await router.push("/home");
   });
 };
 </script>

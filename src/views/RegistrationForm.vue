@@ -151,11 +151,15 @@
 import { ref, reactive, computed, watch } from "vue";
 import { useRoute } from "vue-router";
 import { ElMessage, ElMessageBox } from "element-plus";
+import { useEventsStore } from "@/stores/eventsStore";
+import { useUserStore } from "@/stores/userStore";
 import eventFormConfigs, {
   DEFAULT_FORM_KEY,
 } from "../data/eventFormConfigs.js";
 
 const route = useRoute();
+const eventsStore = useEventsStore();
+const userStore = useUserStore();
 const formRef = ref();
 const submitting = ref(false);
 
@@ -213,6 +217,21 @@ watch(
     form.remark = "";
   },
   { immediate: true }
+);
+
+const prefillForm = () => {
+  const info = userStore.userInfo || {};
+  if (info.name) form.name = info.name;
+  if (info.studentId) form.studentId = info.studentId;
+  if (info.department) form.department = info.department;
+  if (info.phone) form.phone = info.phone;
+  if (info.email) form.email = info.email;
+};
+
+watch(
+  () => userStore.userInfo,
+  () => prefillForm(),
+  { immediate: true, deep: true }
 );
 
 const rules = {
@@ -281,6 +300,14 @@ const handleSubmit = () => {
       submitting.value = true;
       const res = await mockSubmitApi(payload.value);
       if (res?.ok) {
+        const meta = currentConfig.value.meta || {};
+        await eventsStore.addUpcomingEvent({
+          id: meta.id || `form-${formKey.value}-${Date.now()}`,
+          title: meta.title || pageTitle.value,
+          date: meta.date || "时间待通知",
+          location: meta.location || "地点待通知",
+        });
+        userStore.incrementRegistered?.();
         ElMessage.success("报名成功，请留意通知！");
         handleReset();
       }

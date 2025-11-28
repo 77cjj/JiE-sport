@@ -232,6 +232,46 @@ export const useEventsStore = defineStore('events', () => {
       return { success: false, message: '报名失败，请稍后重试' }
     }
   }
+
+  /**
+   * 从报名表单添加自定义活动
+   */
+  const addUpcomingEvent = (eventInfo = {}) => {
+    const today = new Date().toISOString().split('T')[0]
+    const eventId = eventInfo.id || `form-${Date.now()}`
+    const title = eventInfo.title || '校园活动'
+    const date = eventInfo.date || '时间待通知'
+    const location = eventInfo.location || '地点待通知'
+
+    const existing = registeredEvents.value.find((e) => e.id === eventId)
+    const record = {
+      id: eventId,
+      title,
+      date,
+      location,
+      status: 'upcoming',
+      registrationTime: today,
+    }
+
+    if (existing) {
+      Object.assign(existing, record)
+    } else {
+      registeredEvents.value.push(record)
+    }
+
+    notifications.value.unshift({
+      id: Date.now(),
+      message: `你已成功报名 ${title}`,
+      date: today,
+      type: 'success',
+      read: false,
+    })
+
+    localStorage.setItem('registeredEvents', JSON.stringify(registeredEvents.value))
+    localStorage.setItem('notifications', JSON.stringify(notifications.value))
+
+    return { success: true, message: '报名记录已同步' }
+  }
   
   /**
    * 取消报名
@@ -344,6 +384,7 @@ export const useEventsStore = defineStore('events', () => {
     getEventById,
     registerEvent,
     cancelRegistration,
+    addUpcomingEvent,
     markNotificationAsRead,
     markAllNotificationsAsRead,
     addToHistory,

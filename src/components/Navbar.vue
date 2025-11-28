@@ -20,21 +20,33 @@
       </el-menu>
       
       <!-- 用户头像 -->
-      <div class="user-avatar">
-        <el-avatar
-          size="default"
-          src="https://www.gravatar.com/avatar?d=identicon"
-        />
-      </div>
+      <el-dropdown trigger="click" @command="handleCommand">
+        <div class="user-avatar">
+          <el-avatar
+            size="default"
+            src="https://www.gravatar.com/avatar?d=identicon"
+          />
+        </div>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item command="profile">个人主页</el-dropdown-item>
+            <el-dropdown-item divided command="logout">退出登录</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </div>
   </header>
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { ref, watch } from "vue";
+import { ElMessageBox, ElMessage } from "element-plus";
+import { useUserStore } from "@/stores/userStore";
 
 const route = useRoute();
+const router = useRouter();
+const userStore = useUserStore();
 const menuIndexes = ["/home", "/eventdoc", "/registration", "/profile"];
 
 const resolveActive = (path) => {
@@ -54,6 +66,27 @@ watch(
   },
   { immediate: true }
 );
+
+const handleCommand = async (command) => {
+  if (command === "profile") {
+    router.push("/profile");
+    return;
+  }
+  if (command === "logout") {
+    try {
+      await ElMessageBox.confirm("确定要退出当前账号吗？", "退出登录", {
+        confirmButtonText: "退出",
+        cancelButtonText: "取消",
+        type: "warning",
+      });
+      userStore.logout();
+      ElMessage.success("已退出登录");
+      router.push("/login");
+    } catch (_) {
+      // 用户取消
+    }
+  }
+};
 </script>
 
 <style scoped>

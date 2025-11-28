@@ -17,6 +17,7 @@ const routes = [
   // 登录和注册页面不需要 Navbar，单独配置
   { path: '/register', component: () => import('@/views/Register.vue') },
   { path: '/login', component: () => import('@/views/Login.vue') },
+  { path: '/:pathMatch(.*)*', component: () => import('@/views/NotFound.vue') },
 ]
 
 const router = createRouter({

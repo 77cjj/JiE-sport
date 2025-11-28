@@ -1,2 +1,0 @@
-
-c6c19de2e6c51d2a158e54ce621d1ed65d180ef4	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@vue%2fcompiler-core","integrity":null,"time":1756095659522,"size":"262","metadata":{"time":1756095659522,"url":"http://registry.npm.taobao.org/@vue%2fcompiler-core","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:21:01 GMT","location":"https://registry.npmmirror.com/@vue%2fcompiler-core"},"options":{"compress":true},"status":301}}

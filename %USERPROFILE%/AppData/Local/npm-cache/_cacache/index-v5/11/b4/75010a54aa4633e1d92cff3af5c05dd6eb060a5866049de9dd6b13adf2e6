@@ -1,2 +1,0 @@
-
-e58cd0107ee07df59b1a2d4ad7aa27a3f91ecf52	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/find-up","integrity":null,"time":1756618388764,"size":"262","metadata":{"time":1756618388764,"url":"http://registry.npm.taobao.org/find-up","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/find-up"},"options":{"compress":true},"status":301}}

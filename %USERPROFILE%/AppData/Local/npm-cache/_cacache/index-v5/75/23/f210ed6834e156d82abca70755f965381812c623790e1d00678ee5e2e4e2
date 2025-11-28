@@ -1,2 +1,0 @@
-
-a5e700b41f54d0f1b9fa28fb8f3f0cc05f25b177	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@vue%2fbabel-plugin-jsx","integrity":null,"time":1756095654195,"size":"262","metadata":{"time":1756095654195,"url":"http://registry.npm.taobao.org/@vue%2fbabel-plugin-jsx","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:55 GMT","location":"https://registry.npmmirror.com/@vue%2fbabel-plugin-jsx"},"options":{"compress":true},"status":301}}

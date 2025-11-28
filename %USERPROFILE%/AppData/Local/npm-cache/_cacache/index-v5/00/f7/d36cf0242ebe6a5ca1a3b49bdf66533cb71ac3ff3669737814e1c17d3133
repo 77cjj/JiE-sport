@@ -1,2 +1,0 @@
-
-bd6006ffbc3782e9dd3058a1fac24044816990da	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/jiti","integrity":null,"time":1756095639118,"size":"262","metadata":{"time":1756095639118,"url":"http://registry.npm.taobao.org/jiti","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:40 GMT","location":"https://registry.npmmirror.com/jiti"},"options":{"compress":true},"status":301}}

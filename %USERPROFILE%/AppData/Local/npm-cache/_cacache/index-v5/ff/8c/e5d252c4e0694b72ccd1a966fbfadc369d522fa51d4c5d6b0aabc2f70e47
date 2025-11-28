@@ -1,2 +1,0 @@
-
-e8b1ae27a6c4439d925ef2be0e22a74776a50265	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/node-addon-api","integrity":null,"time":1756095831626,"size":"262","metadata":{"time":1756095831626,"url":"http://registry.npm.taobao.org/node-addon-api","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:53 GMT","location":"https://registry.npmmirror.com/node-addon-api"},"options":{"compress":true},"status":301}}

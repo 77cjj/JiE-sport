@@ -1,2 +1,0 @@
-
-f977955ccac063438bb8d9c5f507e6303fc72705	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/neo-async","integrity":null,"time":1756618386231,"size":"262","metadata":{"time":1756618386231,"url":"http://registry.npm.taobao.org/neo-async","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:06 GMT","location":"https://registry.npmmirror.com/neo-async"},"options":{"compress":true},"status":301}}

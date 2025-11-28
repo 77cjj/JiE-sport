@@ -1,2 +1,0 @@
-
-8143692d248fb0de745cb87cf1fc7194581ce9ca	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/vite-plugin-inspect","integrity":null,"time":1756095642818,"size":"262","metadata":{"time":1756095642818,"url":"http://registry.npm.taobao.org/vite-plugin-inspect","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:44 GMT","location":"https://registry.npmmirror.com/vite-plugin-inspect"},"options":{"compress":true},"status":301}}

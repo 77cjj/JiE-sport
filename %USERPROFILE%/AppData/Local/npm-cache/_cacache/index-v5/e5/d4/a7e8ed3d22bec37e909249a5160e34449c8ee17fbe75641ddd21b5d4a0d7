@@ -1,2 +1,0 @@
-
-f231ac0fe5e9316909431dffaf48d2675c55e72e	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/pretty-ms","integrity":null,"time":1756095653598,"size":"262","metadata":{"time":1756095653598,"url":"http://registry.npm.taobao.org/pretty-ms","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:55 GMT","location":"https://registry.npmmirror.com/pretty-ms"},"options":{"compress":true},"status":301}}

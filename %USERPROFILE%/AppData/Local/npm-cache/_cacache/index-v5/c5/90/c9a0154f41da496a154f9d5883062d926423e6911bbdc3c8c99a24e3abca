@@ -1,2 +1,0 @@
-
-a80884ef4e8210cfadaf003aa434d3b4951dd1c3	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@rollup%2frollup-win32-x64-msvc","integrity":null,"time":1756095651562,"size":"262","metadata":{"time":1756095651562,"url":"http://registry.npm.taobao.org/@rollup%2frollup-win32-x64-msvc","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:53 GMT","location":"https://registry.npmmirror.com/@rollup%2frollup-win32-x64-msvc"},"options":{"compress":true},"status":301}}

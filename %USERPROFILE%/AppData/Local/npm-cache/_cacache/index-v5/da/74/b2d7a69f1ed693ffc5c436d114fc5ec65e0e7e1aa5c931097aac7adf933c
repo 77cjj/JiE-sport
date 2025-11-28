@@ -1,2 +1,0 @@
-
-9a48a447d408bc40e124b30aaf974f0f5ee13a62	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/execa","integrity":null,"time":1756095642974,"size":"262","metadata":{"time":1756095642973,"url":"http://registry.npm.taobao.org/execa","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:44 GMT","location":"https://registry.npmmirror.com/execa"},"options":{"compress":true},"status":301}}

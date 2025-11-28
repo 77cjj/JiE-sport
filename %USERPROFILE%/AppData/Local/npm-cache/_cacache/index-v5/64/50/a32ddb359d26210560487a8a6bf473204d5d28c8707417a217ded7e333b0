@@ -1,2 +1,0 @@
-
-b8b7fcdcb6b793ae243c58db28dd9a258e265f29	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/vite-plugin-vue-inspector","integrity":null,"time":1756095643767,"size":"262","metadata":{"time":1756095643767,"url":"http://registry.npm.taobao.org/vite-plugin-vue-inspector","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:45 GMT","location":"https://registry.npmmirror.com/vite-plugin-vue-inspector"},"options":{"compress":true},"status":301}}

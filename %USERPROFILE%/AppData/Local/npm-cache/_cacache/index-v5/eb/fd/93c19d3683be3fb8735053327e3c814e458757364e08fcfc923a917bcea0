@@ -1,2 +1,0 @@
-
-b98a3b4481a5b8653c54c1406aeb12e894511bd6	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/ohash","integrity":null,"time":1756095653664,"size":"262","metadata":{"time":1756095653664,"url":"http://registry.npm.taobao.org/ohash","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:55 GMT","location":"https://registry.npmmirror.com/ohash"},"options":{"compress":true},"status":301}}

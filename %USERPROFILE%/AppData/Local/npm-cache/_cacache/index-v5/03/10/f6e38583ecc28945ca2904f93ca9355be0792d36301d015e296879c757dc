@@ -1,2 +1,0 @@
-
-f759d2ec74deb27ca4e7bd68c02bfa6f2d801f62	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/caniuse-lite","integrity":null,"time":1756095662344,"size":"262","metadata":{"time":1756095662344,"url":"http://registry.npm.taobao.org/caniuse-lite","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:21:04 GMT","location":"https://registry.npmmirror.com/caniuse-lite"},"options":{"compress":true},"status":301}}

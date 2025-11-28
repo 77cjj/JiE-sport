@@ -38,8 +38,25 @@ const docs = [
 
 <style scoped>
 .left-nav {
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
   border-right: 1px solid #e6e9f0;
   padding-right: 12px;
+  padding-bottom: 12px;
+  background: rgba(250, 251, 255, 0.9);
+}
+.left-nav::-webkit-scrollbar {
+  width: 6px;
+}
+.left-nav::-webkit-scrollbar-thumb {
+  background: rgba(30, 64, 175, 0.2);
+  border-radius: 4px;
+}
+.left-nav::-webkit-scrollbar-track {
+  background: transparent;
 }
 .section-title {
   font-size: 13px;

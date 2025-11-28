@@ -1,2 +1,0 @@
-
-4aefbdc8ae4d50f3bf6dfec37bf74db517976d16	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/vite-hot-client","integrity":null,"time":1756095653041,"size":"262","metadata":{"time":1756095653041,"url":"http://registry.npm.taobao.org/vite-hot-client","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:54 GMT","location":"https://registry.npmmirror.com/vite-hot-client"},"options":{"compress":true},"status":301}}

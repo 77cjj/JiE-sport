@@ -1,2 +1,0 @@
-
-f5a90f74bfa9aa10cb888128975431d58b16a7bb	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/estree-walker","integrity":null,"time":1756095667071,"size":"262","metadata":{"time":1756095667071,"url":"http://registry.npm.taobao.org/estree-walker","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:21:08 GMT","location":"https://registry.npmmirror.com/estree-walker"},"options":{"compress":true},"status":301}}

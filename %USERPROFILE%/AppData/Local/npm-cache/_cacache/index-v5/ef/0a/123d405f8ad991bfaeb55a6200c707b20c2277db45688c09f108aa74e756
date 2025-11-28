@@ -1,2 +1,0 @@
-
-be2d02d4e22aa77b5ac45c404a2c05df9cf22688	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@parcel%2fwatcher-linux-x64-glibc","integrity":null,"time":1756095831677,"size":"262","metadata":{"time":1756095831677,"url":"http://registry.npm.taobao.org/@parcel%2fwatcher-linux-x64-glibc","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:53 GMT","location":"https://registry.npmmirror.com/@parcel%2fwatcher-linux-x64-glibc"},"options":{"compress":true},"status":301}}

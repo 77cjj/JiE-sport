@@ -1,2 +1,0 @@
-
-9a566d17383067dbda84d466806117b881ea502d	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/resolve-cwd","integrity":null,"time":1756618388632,"size":"262","metadata":{"time":1756618388632,"url":"http://registry.npm.taobao.org/resolve-cwd","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/resolve-cwd"},"options":{"compress":true},"status":301}}

@@ -1,2 +1,0 @@
-
-64ae0a66a97e3f68b0043f1732dd14c4d1000502	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/path-parse","integrity":null,"time":1756618389113,"size":"262","metadata":{"time":1756618389113,"url":"http://registry.npm.taobao.org/path-parse","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/path-parse"},"options":{"compress":true},"status":301}}

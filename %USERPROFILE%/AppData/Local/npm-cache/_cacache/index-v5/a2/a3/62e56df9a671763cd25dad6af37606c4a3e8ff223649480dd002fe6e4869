@@ -1,2 +1,0 @@
-
-7aaf3386a3a09ef84cda14a1df599d5c325b5c0a	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/glob-to-regexp","integrity":null,"time":1756618385422,"size":"262","metadata":{"time":1756618385422,"url":"http://registry.npm.taobao.org/glob-to-regexp","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:06 GMT","location":"https://registry.npmmirror.com/glob-to-regexp"},"options":{"compress":true},"status":301}}

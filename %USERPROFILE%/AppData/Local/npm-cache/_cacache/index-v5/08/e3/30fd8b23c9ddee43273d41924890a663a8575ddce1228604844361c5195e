@@ -1,2 +1,0 @@
-
-bd5e4699fa0ebad50e5a9ab33fd36e6dc4df2cb8	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@vue%2fruntime-dom","integrity":null,"time":1756095643035,"size":"262","metadata":{"time":1756095643035,"url":"http://registry.npm.taobao.org/@vue%2fruntime-dom","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:44 GMT","location":"https://registry.npmmirror.com/@vue%2fruntime-dom"},"options":{"compress":true},"status":301}}

@@ -1,2 +1,0 @@
-
-2202b79e69294e206b70990793ded3e992a8d984	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/mime-db","integrity":null,"time":1756095820821,"size":"262","metadata":{"time":1756095820821,"url":"http://registry.npm.taobao.org/mime-db","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:42 GMT","location":"https://registry.npmmirror.com/mime-db"},"options":{"compress":true},"status":301}}

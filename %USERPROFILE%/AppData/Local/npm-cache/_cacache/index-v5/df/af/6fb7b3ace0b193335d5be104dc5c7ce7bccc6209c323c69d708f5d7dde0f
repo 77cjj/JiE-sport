@@ -1,2 +1,0 @@
-
-248e4411661088c75aea1265d932471309bef71f	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@sindresorhus%2fmerge-streams","integrity":null,"time":1756095653001,"size":"262","metadata":{"time":1756095653001,"url":"http://registry.npm.taobao.org/@sindresorhus%2fmerge-streams","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:54 GMT","location":"https://registry.npmmirror.com/@sindresorhus%2fmerge-streams"},"options":{"compress":true},"status":301}}

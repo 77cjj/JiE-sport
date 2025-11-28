@@ -2,7 +2,7 @@
   <div class="registration-form-page">
     <el-page-header
       class="page-header"
-      content="运动会选拔报名"
+      :content="pageTitle"
       @back="$router.back()"
     />
 
@@ -117,7 +117,7 @@
                 v-model="form.remark"
                 type="textarea"
                 :rows="3"
-                placeholder="如有特殊需求请在此说明"
+                :placeholder="remarkPlaceholder"
               />
             </el-form-item>
           </el-col>
@@ -148,9 +148,14 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from "vue";
+import { ref, reactive, computed, watch } from "vue";
+import { useRoute } from "vue-router";
 import { ElMessage, ElMessageBox } from "element-plus";
+import eventFormConfigs, {
+  DEFAULT_FORM_KEY,
+} from "../data/eventFormConfigs.js";
 
+const route = useRoute();
 const formRef = ref();
 const submitting = ref(false);
 
@@ -177,11 +182,38 @@ const departments = [
   "艺术设计学院",
 ];
 
-const eventGroups = [
-  { label: "短跑", options: ["100米", "200米", "400米"] },
-  { label: "中长跑", options: ["800米", "1500米", "3000米"] },
-  { label: "田赛", options: ["跳远", "跳高", "铅球", "标枪"] },
-];
+const formKey = computed(() => {
+  const key = route.query.event;
+  if (typeof key === "string" && eventFormConfigs[key]) return key;
+  return DEFAULT_FORM_KEY;
+});
+
+const currentConfig = computed(
+  () => eventFormConfigs[formKey.value] || eventFormConfigs[DEFAULT_FORM_KEY]
+);
+
+const pageTitle = computed(() => currentConfig.value.title);
+
+const eventGroups = computed(
+  () => currentConfig.value.eventGroups || eventFormConfigs[DEFAULT_FORM_KEY].eventGroups
+);
+
+const noticeContent = computed(
+  () => currentConfig.value.notice || eventFormConfigs[DEFAULT_FORM_KEY].notice
+);
+
+const remarkPlaceholder = computed(
+  () => currentConfig.value.remarkPlaceholder || "如有特殊需求请在此说明"
+);
+
+watch(
+  () => formKey.value,
+  () => {
+    form.events = [];
+    form.remark = "";
+  },
+  { immediate: true }
+);
 
 const rules = {
   name: [
@@ -225,18 +257,20 @@ const rules = {
 };
 
 const openRules = () => {
-  ElMessageBox.alert(
-    "1. 每人可报不超过2个单人项目；2. 参赛当天需携带有效证件；3. 若因身体原因不适合参赛，请及时向组委会报备。",
-    "竞赛报名须知",
-    { confirmButtonText: "我知道了" }
-  );
+  ElMessageBox.alert(noticeContent.value, "竞赛报名须知", {
+    confirmButtonText: "我知道了",
+  });
 };
 
 const handleReset = () => {
   formRef.value?.resetFields();
 };
 
-const payload = computed(() => ({ ...form }));
+const payload = computed(() => ({
+  ...form,
+  eventKey: formKey.value,
+  eventTitle: pageTitle.value,
+}));
 const mockSubmitApi = (data) =>
   new Promise((resolve) => setTimeout(() => resolve({ ok: true, data }), 1200));
 

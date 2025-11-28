@@ -1,2 +1,0 @@
-
-81eb5e051ba8dd71ecae6205f9a232e45e278b4c	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/is-plain-object","integrity":null,"time":1756618389216,"size":"262","metadata":{"time":1756618389216,"url":"http://registry.npm.taobao.org/is-plain-object","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/is-plain-object"},"options":{"compress":true},"status":301}}

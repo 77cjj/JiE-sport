@@ -1,2 +1,0 @@
-
-e97f107a6a77c78f3d2de5d6e0f47f2bdc0abb0d	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/node-releases","integrity":null,"time":1756095662347,"size":"262","metadata":{"time":1756095662347,"url":"http://registry.npm.taobao.org/node-releases","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:21:04 GMT","location":"https://registry.npmmirror.com/node-releases"},"options":{"compress":true},"status":301}}

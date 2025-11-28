@@ -1,2 +1,0 @@
-
-e46ce1aeabe574814cb0d3c632f434ae4793829c	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/shallow-clone","integrity":null,"time":1756618389218,"size":"262","metadata":{"time":1756618389218,"url":"http://registry.npm.taobao.org/shallow-clone","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:09 GMT","location":"https://registry.npmmirror.com/shallow-clone"},"options":{"compress":true},"status":301}}

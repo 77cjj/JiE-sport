@@ -16,8 +16,8 @@
                   @click="goToFormWith(h)"
                   >{{ h.cta || "报名参加" }}</el-button
                 >
-                <el-link type="primary" :underline="false" @click="openRules"
-                  >点击了解 详情</el-link
+              <el-link type="primary" :underline="false" @click="openDetail(h)"
+                >点击了解 详情</el-link
                 >
               </el-space>
             </div>
@@ -28,6 +28,14 @@
         </el-row>
       </div>
     </section>
+  
+
+    <EventDetailDialog
+      v-model="detailVisible"
+      :event="detailEvent"
+      @primary-action="handleDetailPrimary"
+      @closed="handleDetailClosed"
+    />
   </div>
 </template>
 
@@ -110,7 +118,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import { ElMessageBox } from "element-plus";
+import EventDetailDialog from "../components/EventDetailDialog.vue";
 
 const router = useRouter();
 const heroImage = "/images/track.jpg";
@@ -126,8 +134,20 @@ const fetchMoreHeroesApi = () =>
           title: "篮球联赛报名",
           subtitle: "班级为单位，团队协作，赛场见！",
           image: "../public/images/1.jpg",
+          cover: "../public/images/1.jpg",
           cta: "现在报名",
-          query: { event: "篮球联赛" },
+          query: { event: "basketballLeague" },
+          date: "2025年10月20日 - 11月5日",
+          location: "校体育馆主场",
+          participants: "5人制，限额20支队伍",
+          description:
+            "篮球联赛是秋季重磅赛事，强调班级荣誉与团队配合，设有淘汰赛与明星赛两个环节。",
+          highlights: [
+            "🏀 专业裁判团队执法",
+            "📊 提供技术统计与数据榜单",
+            "🎤 决赛现场设拉拉队加油环节",
+            "🎁 冠军获得球队周边礼包",
+          ],
         },
         {
           id: "h3",
@@ -135,8 +155,20 @@ const fetchMoreHeroesApi = () =>
           title: "羽毛球公开赛报名",
           subtitle: "单打双打，等你来战。",
           image: "../public/images/1.jpg",
+          cover: "../public/images/1.jpg",
           cta: "立即参与",
-          query: { event: "羽毛球公开赛" },
+          query: { event: "badmintonOpen" },
+          date: "2025年11月1日 - 11月15日",
+          location: "体育馆羽毛球场",
+          participants: "单打/双打，不限人数",
+          description:
+            "羽毛球公开赛按水平分组，面向全校开放，鼓励不同年级和学院的同学同场竞技。",
+          highlights: [
+            "🏸 设男单、女单、混双等项目",
+            "🎥 全程录像供选手复盘",
+            "🎯 技术教练提供现场指导",
+            "🥇 前三名获得奖杯与训练卡",
+          ],
         },
         {
           id: "h4",
@@ -144,23 +176,49 @@ const fetchMoreHeroesApi = () =>
           title: "游泳邀请赛报名",
           subtitle: "自由泳/蛙泳/仰泳/蝶泳项目开放报名。",
           image: "../public/images/1.jpg",
+          cover: "../public/images/1.jpg",
           cta: "去报名",
-          query: { event: "游泳邀请赛" },
+          query: { event: "swimmingInvite" },
+          date: "2025年11月20日",
+          location: "游泳馆",
+          participants: "个人赛，项目任选",
+          description:
+            "游泳邀请赛分为多个泳姿项目，采用电动计时，确保公平公正，欢迎有水上项目基础的同学参加。",
+          highlights: [
+            "🏊‍♂️ 设预赛与决赛两轮",
+            "💧 现场提供热身池与理疗区",
+            "🎖️ 设最佳泳姿与突破奖",
+            "📸 赛事摄影团队跟拍",
+          ],
         },
         {
-          id: "h4",
-          badge: "10.28截止！",
-          title: "游泳邀请赛报名",
-          subtitle: "自由泳/蛙泳/仰泳/蝶泳项目开放报名。",
+          id: "h5",
+          badge: "11.05截止！",
+          title: "田径公开赛报名",
+          subtitle: "短跑、中长跑、跳远、铅球全面开放。",
           image: "../public/images/1.jpg",
+          cover: "../public/images/1.jpg",
           cta: "去报名",
-          query: { event: "游泳邀请赛" },
+          query: { event: "trackOpen" },
+          date: "2025年12月1日 - 12月3日",
+          location: "田径场",
+          participants: "个人赛，可报 2 个项目",
+          description:
+            "田径公开赛为冬训成果展示提供舞台，涵盖短跑、长跑、跳跃与投掷项目。",
+          highlights: [
+            "⏱️ 电子计时和成绩同步发布",
+            "🧊 赛后提供放松恢复区",
+            "🎤 解说团队现场讲解战术",
+            "🎁 完赛即可获得纪念勋章",
+          ],
         },
       ]);
     }, 280);
   });
 
 const moreHeroes = ref([]);
+const detailVisible = ref(false);
+const detailEvent = ref(null);
 
 onMounted(async () => {
   moreHeroes.value = await fetchMoreHeroesApi();
@@ -174,11 +232,22 @@ const goToFormWith = (h) => {
   router.push({ path: "/registration/form", query: h.query || {} });
 };
 
-const openRules = () => {
-  ElMessageBox.alert(
-    "1. 每人可报不超过2个单人项目；2. 参赛当天需携带有效证件；3. 若因身体原因不适合参赛，请及时向组委会报备。",
-    "竞赛报名须知",
-    { confirmButtonText: "我知道了" }
-  );
+const openDetail = (hero) => {
+  detailEvent.value = hero;
+  detailVisible.value = true;
+};
+
+const handleDetailPrimary = (hero) => {
+  detailVisible.value = false;
+  const target = hero || detailEvent.value;
+  if (target) {
+    goToFormWith(target);
+  } else {
+    goToForm();
+  }
+};
+
+const handleDetailClosed = () => {
+  detailEvent.value = null;
 };
 </script>

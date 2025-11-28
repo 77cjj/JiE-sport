@@ -1,2 +1,0 @@
-
-0674015c437de88b0b36597fe870ceeb35380762	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/to-regex-range","integrity":null,"time":1756095832645,"size":"262","metadata":{"time":1756095832645,"url":"http://registry.npm.taobao.org/to-regex-range","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:54 GMT","location":"https://registry.npmmirror.com/to-regex-range"},"options":{"compress":true},"status":301}}

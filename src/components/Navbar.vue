@@ -35,14 +35,24 @@ import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
 
 const route = useRoute();
-const activeMenu = ref(route.path);
+const menuIndexes = ["/home", "/eventdoc", "/registration", "/profile"];
+
+const resolveActive = (path) => {
+  const match = menuIndexes.find(
+    (index) => path === index || path.startsWith(`${index}/`)
+  );
+  return match || path;
+};
+
+const activeMenu = ref(resolveActive(route.path));
 
 // 监听路由变化，更新导航高亮
 watch(
   () => route.path,
   (newPath) => {
-    activeMenu.value = newPath;
-  }
+    activeMenu.value = resolveActive(newPath);
+  },
+  { immediate: true }
 );
 </script>
 

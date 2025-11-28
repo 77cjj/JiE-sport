@@ -1,2 +1,0 @@
-
-9a524fa611015e941820cfafdfdbcc20b700343f	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@types%2feslint-scope","integrity":null,"time":1756618385386,"size":"262","metadata":{"time":1756618385386,"url":"http://registry.npm.taobao.org/@types%2feslint-scope","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:06 GMT","location":"https://registry.npmmirror.com/@types%2feslint-scope"},"options":{"compress":true},"status":301}}

@@ -1,2 +1,0 @@
-
-53a2cc2a32d4ab5af061571d962350f3b5798770	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/gopd","integrity":null,"time":1756095821010,"size":"262","metadata":{"time":1756095821010,"url":"http://registry.npm.taobao.org/gopd","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:42 GMT","location":"https://registry.npmmirror.com/gopd"},"options":{"compress":true},"status":301}}

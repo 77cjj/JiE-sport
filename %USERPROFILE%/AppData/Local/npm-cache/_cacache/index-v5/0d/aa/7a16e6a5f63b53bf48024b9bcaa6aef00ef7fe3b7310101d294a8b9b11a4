@@ -1,2 +1,0 @@
-
-d4051b57626be4b5810156ae58b5daeda68ca807	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@sec-ant%2freadable-stream","integrity":null,"time":1756095655862,"size":"262","metadata":{"time":1756095655862,"url":"http://registry.npm.taobao.org/@sec-ant%2freadable-stream","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:20:57 GMT","location":"https://registry.npmmirror.com/@sec-ant%2freadable-stream"},"options":{"compress":true},"status":301}}

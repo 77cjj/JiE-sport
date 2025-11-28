@@ -1,2 +1,0 @@
-
-507054342eebc12890bec2d0590e214543e0c008	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@parcel%2fwatcher-linux-arm64-musl","integrity":null,"time":1756095831689,"size":"262","metadata":{"time":1756095831689,"url":"http://registry.npm.taobao.org/@parcel%2fwatcher-linux-arm64-musl","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:53 GMT","location":"https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm64-musl"},"options":{"compress":true},"status":301}}

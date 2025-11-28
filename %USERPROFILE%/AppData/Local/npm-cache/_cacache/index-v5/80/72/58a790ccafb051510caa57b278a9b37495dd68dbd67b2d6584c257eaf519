@@ -1,2 +1,0 @@
-
-7cc509ed21d835656773330270e254340740a48c	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/rechoir","integrity":null,"time":1756618386532,"size":"262","metadata":{"time":1756618386532,"url":"http://registry.npm.taobao.org/rechoir","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:07 GMT","location":"https://registry.npmmirror.com/rechoir"},"options":{"compress":true},"status":301}}

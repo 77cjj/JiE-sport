@@ -1,2 +1,0 @@
-
-08583721d04f82e4cbb79ff0e98b2a18bc0ee863	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/dayjs","integrity":null,"time":1756095791219,"size":"262","metadata":{"time":1756095791219,"url":"http://registry.npm.taobao.org/dayjs","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Mon, 25 Aug 2025 04:23:13 GMT","location":"https://registry.npmmirror.com/dayjs"},"options":{"compress":true},"status":301}}

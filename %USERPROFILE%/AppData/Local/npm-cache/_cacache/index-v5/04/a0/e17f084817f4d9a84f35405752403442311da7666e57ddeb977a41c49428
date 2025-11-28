@@ -1,2 +1,0 @@
-
-2027f77a8698845e7bc42b1c1f2933bd29f117a3	{"key":"make-fetch-happen:request-cache:http://registry.npm.taobao.org/@webassemblyjs%2fhelper-api-error","integrity":null,"time":1756618386785,"size":"262","metadata":{"time":1756618386785,"url":"http://registry.npm.taobao.org/@webassemblyjs%2fhelper-api-error","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sun, 31 Aug 2025 05:33:07 GMT","location":"https://registry.npmmirror.com/@webassemblyjs%2fhelper-api-error"},"options":{"compress":true},"status":301}}

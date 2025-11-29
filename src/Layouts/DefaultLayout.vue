@@ -84,20 +84,20 @@ onUnmounted(() => {
   }
   
   .main-content {
-    /* 移动端：预留顶部导航栏高度 56px */
-    padding-top: 56px;
-    min-height: calc(100vh - 56px);
+    /* 移动端：navbar 不再固定，所以不需要 padding-top */
+    padding-top: 57px;
+    min-height: 100vh;
     
     /* TODO: 如果有底部导航栏，取消注释 */
     /* padding-bottom: 60px; */
-    /* min-height: calc(100vh - 116px); */
+    /* min-height: calc(100vh - 60px); */
   }
 }
 
 /* 小屏移动端适配 (≤480px) */
 @media (max-width: 480px) {
   .main-content {
-    padding-top: 56px;
+    padding-top: 57px;
   }
 }
 

@@ -1,5 +1,8 @@
 <template>
   <div class="doc-page">
+    <!-- 移动端文档选择器 -->
+    <MobileDocSelector />
+    
     <!-- 左侧文章列表 -->
     <LeftNav class="left-nav" :docs="docList" />
 
@@ -24,6 +27,7 @@ import { useRoute } from "vue-router";
 import MarkdownIt from "markdown-it";
 import LeftNav from "../components/LeftNav.vue";
 import RightContent from "../components/RightContent.vue";
+import MobileDocSelector from "../components/MobileDocSelector.vue";
 import eventDocs from "../data/eventDocs.js";
 
 const md = new MarkdownIt();
@@ -72,16 +76,14 @@ watch(
   min-height: 100vh;
 }
 
-/* 右侧目录固定 */
+/* 右侧目录 - 使用 grid 布局，不需要 fixed */
 .RightContent {
-  position: fixed;
-  top: 80px; /* 顶部导航高度 + margin */
-  right: 4px;
+  /* 移除 fixed 定位，让组件自身的 sticky 生效 */
+  /* position: fixed; */
+  /* top: 80px; */
+  /* right: 4px; */
   width: 220px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-  border-left: 1px solid #e6e9f0;
-  padding-left: 16px;
+  /* RightContent 组件内部已经有 sticky 定位和 max-height 了 */
 }
 
 /* 左侧文章列表 */
@@ -128,10 +130,19 @@ watch(
 @media (max-width: 768px) {
   .doc-page {
     grid-template-columns: 1fr;
-    padding: 12px 16px;
+    padding: 56px 16px 12px; /* 顶部留出 navbar 空间，左右保持 padding */
+    position: relative;
   }
   .left-nav {
     display: none;
+  }
+  
+  /* 让选择器紧贴在 navbar 下方，并且全宽 */
+  .doc-page > :first-child {
+    margin-top: -56px; /* 向上移动到 navbar 下方 */
+    margin-left: -16px; /* 突破左侧 padding */
+    margin-right: -16px; /* 突破右侧 padding */
+    width: calc(100% + 32px); /* 补偿左右 margin */
   }
 }
 </style>

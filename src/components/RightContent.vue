@@ -121,11 +121,14 @@ onBeforeUnmount(() => {
 <style scoped>
 .toc {
   position: sticky;
-  top: 16px;
+  top: 80px; /* 导航栏高度 + 一些间距 */
   align-self: start;
   border-left: 1px solid #e6e9f0;
   padding-left: 16px;
   color: #6b7280;
+  max-height: calc(100vh - 120px); /* 限制最大高度，避免与 footer 重叠 */
+  overflow-y: auto; /* 如果内容太多，允许滚动 */
+  padding-bottom: 20px; /* 底部留白 */
 }
 .toc-title {
   font-size: 13px;
@@ -149,7 +152,7 @@ onBeforeUnmount(() => {
   transition: color 0.2s;
 }
 .toc a.active {
-  color: #1e40af;
+  color: #3990fb;   
   font-weight: 600;
 }
 .toc a.active::before {
@@ -160,10 +163,28 @@ onBeforeUnmount(() => {
   transform: translateY(-50%);
   width: 6px; /* 粗一点 */
   height: 100%;
-  background-color: #1e40af;
+  background-color: #3990fb;
   border-radius: 3px; /* 圆角 */
 }
 .toc-text {
   display: inline-block;
+}
+
+/* 美化滚动条 */
+.toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.toc::-webkit-scrollbar-thumb {
+  background: rgba(64, 158, 255, 0.3);
+  border-radius: 4px;
+}
+
+.toc::-webkit-scrollbar-thumb:hover {
+  background: rgba(64, 158, 255, 0.5);
+}
+
+.toc::-webkit-scrollbar-track {
+  background: transparent;
 }
 </style>

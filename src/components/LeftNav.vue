@@ -82,7 +82,7 @@ const docs = [
   transition: color 0.2s;
 }
 .nav-items li.active a {
-  color: #1e40af; /* 蓝色文字 */
+  color: #3990fb; /* 蓝色文字 */
   background: #e0f0ff; /* 淡蓝色背景 */
   font-weight: 600;
 }
@@ -90,6 +90,6 @@ const docs = [
   transform: scale(0.98);
 }
 .nav-items li:hover a {
-  color: #1e40af;
+  color: #3990fb;
 }
 </style>
